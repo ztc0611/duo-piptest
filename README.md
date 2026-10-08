@@ -1,6 +1,8 @@
-# Duo PiP Test
+# iPhone Duo Simulator PiP Test
 
-A small native video player for testing Picture in Picture (PiP) layouts on the iPhone Duo simulator.
+A small native video player for testing Picture in Picture (PiP) layouts on the iPhone Duo simulator. Useful to test app behavior when pinning PiP on the inner screen in portrait. Currently the simulator has PiP disabled, this project has instructions both to re-enable it, and a test project for different aspect ratios.
+
+<img width="8000" height="2965" alt="Four iPhone Duos showing a pinned Picture in Picture video above the active app at 21:9, 16:9, 4:3 and 1:1. Wider videos fill the full width and leave the app more room (about 69% and 59% of the screen height). 4:3 and 1:1 both stop at about half the screen height, leaving the app about 49%, and 1:1 shows black bars on the sides." src="https://github.com/user-attachments/assets/166e5605-7978-4040-9deb-3069d1d20737" />
 
 ## Tested setup
 
@@ -70,11 +72,9 @@ The final `test` requires `getenv` to exactly match the absolute local path and 
 2. Choose an aspect ratio: `21:9`, `16:9`, `4:3`, `1:1`, or `9:16`.
 3. Tap **Start PiP**. Starting PiP is explicit in this test app; pressing Home does not start it automatically.
 4. Unfold the Duo to its inner display, then tap the floating video to show its controls.
-5. Tap the **two-rectangles** control beside Fullscreen to pin the video to the upper display. The lower display can then show another app.
+5. Tap the **two-rectangles** control beside Fullscreen to pin the video to the upper display. The lower display can then show another app. Going into partially folded mode makes the video go 50/50 regardless of aspect ratio.
 
 Stop PiP before changing the aspect ratio. The test app’s ratio and Start/Stop controls stay at the bottom.
-
-Setup, launch, stop, and all five aspect ratios have been exercised. Automated interaction with the pin control has not been verified; the pinning steps above describe the observed manual workflow.
 
 ## Checks
 
